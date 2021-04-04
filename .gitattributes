@@ -1,0 +1,12 @@
+*.amf filter=lfs diff=lfs merge=lfs -text
+*.stl filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/pipemod.amf filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/up_down_button.amf filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/dna_internal.amf filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/fire_button.amf filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/pipe_cap.amf filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/pipe_cap.stl filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/pipemod.stl filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/up_down_button.stl filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/dna_internal.stl filter=lfs diff=lfs merge=lfs -text
+Completed[[:space:]]Files/fire_button.stl filter=lfs diff=lfs merge=lfs -text
