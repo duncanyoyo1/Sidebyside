@@ -18,5 +18,4 @@ You will find the files in the [Completed Files](Completed_Files) directory.
 
 
 
-=======
-A 3D Printed Side by side Mod for the DNA60 Chipset from [Evolv](https://evolvapor.com)
+## A 3D Printed Side by side Mod for the DNA60 Chipset from [Evolv](https://evolvapor.com)
