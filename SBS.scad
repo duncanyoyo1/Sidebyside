@@ -229,6 +229,9 @@ module Chassis(){
     translate([0,0,-39])
     battery_enclosure();
     battery_door_cut();
+    rotate([0,90,0])
+    translate([0,-30.75,0])
+    cylinder(d=40, h=26, center=true);
  }  
 }
 module battery_enclosure(){
@@ -298,9 +301,8 @@ sbs_cut();
 }
 
 //battery_enclosure();
-//translate([0,-12.5,4.5])
-//battery_21700();
+translate([0,-12.5,4.5])
+battery_21700();
 
-/*translate([0,0,40])
+translate([0,0,40])
 battery_door();
-*/
