@@ -28,6 +28,10 @@ module Chassis(){
     translate([0,-30.75,0])
     cylinder(d=40, h=26, center=true);
     DNA60_Screen();
+    mUSB_hole();
+    translate([-7.3,15.75,-32])
+    rotate([0,90,0])
+    cylinder(d=4.75, h=7, center=true);
  }  
 }
 module battery_enclosure(){
@@ -102,6 +106,32 @@ module button_cutout() {
     translate([-12,4,-32])
     rotate([0,90,0])
     cylinder(d=4, h=5, center=true);
+}
+module buttons(){
+  union(){
+  translate([-10.5,4,8])
+  rotate([0,90,0])
+  cylinder(d=3.75, h=5, center=true);
+  translate([-7.3,4,8])
+  rotate([0,90,0])
+  cylinder(d=4.5, h=7, center=true);
+  }
+  union(){
+  translate([-10.5,15.75,8])
+  rotate([0,90,0])
+  cylinder(d=3.75, h=5, center=true);
+  translate([-7.3,15.75,8])
+  rotate([0,90,0])
+  cylinder(d=4.5, h=7, center=true);
+  }
+  union(){
+  translate([-10.5,9.75,31])
+  rotate([0,90,0])
+  cylinder(d=6.5, h=5, center=true);
+  translate([-8,9.75,31])
+  rotate([0,90,0])
+  cylinder(d=8, h=5.5, center=true);
+  }
 }
 module standoff (){
        rotate([90,0,0])
@@ -217,6 +247,20 @@ module DNA60_Screen () {
 translate([12,10,-17])
 cube([4,6,23], center=true);
 
+}
+module DNA60_Sceen_Holder (){
+        union(){
+        translate([12,-1,5])
+        cube([8,14,1], center=true);
+        difference(){
+        translate([5,-1,3])
+        rotate([90,0,90])
+        cube([14,3,22], center=true);
+        translate([-2,-1,0])
+        rotate([90,0,90])
+        cube([11.6,10,33], center=true);  
+    }
+  }
 }
 module battery_21700 () {
 cylinder(h=70.5,d=21);
@@ -420,9 +464,10 @@ module bend(size=[50,20,2],angle=45,radius=10,center=false, flatten=false){
 }
 
 module mUSB_hole(){
-    translate([0,28,4.75])
-    fillet(fillet=1.5, size=[8.5,10,3], $fn=64) {
-    cube(size=[8.5,10,3], center=true);
+    rotate([0,90,0])
+    translate([40,10,8.3])
+    fillet(fillet=1.5, size=[8.5,8.5,3.25], $fn=64) {
+    cube(size=[8.5,8.5,3.25], center=true);
  }
 }
 
@@ -431,13 +476,19 @@ Chassis();
 sbs_cut();
 }
 
-//battery_enclosure();
 //translate([0,-12.5,4.5])
 //battery_21700();
 
+buttons();
 //translate([0,0,40])
 //battery_door();
-translate([20,10,-5])
+translate([18.8,10,-5])
 DNA60();
-translate([20,10,-5])
+translate([18.8,10,-5])
 DNA60_Mount();
+translate([12.5,10,23])
+rotate([0,-90,0])
+DNA60_Sceen_Holder();
+translate([9,10,2.5])
+rotate([90,0,-90])
+mUSB();
