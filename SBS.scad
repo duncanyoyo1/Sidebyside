@@ -2,8 +2,8 @@ include <BOSL/constants.scad>
 use <BOSL/masks.scad>
 use <BOSL/transforms.scad>
 
-$fa = 0.1; // Set these to 1 for faster preview.
-$fs = 0.1; // ----------------------------------
+$fa = 1; // Set these to 1 for faster preview.
+$fs = 1; // ----------------------------------
 fudge=0.1; // Don't change this value
 
 
@@ -483,10 +483,9 @@ sbs_cut();
 
 //translate([0,-12.5,4.5])
 //battery_21700();
-
 buttons();
-//translate([0,0,40])
-//battery_door();
+translate([0,0,40])
+battery_door();
 translate([18.8,10,-5])
 DNA60();
 translate([18.8,10,-5])
