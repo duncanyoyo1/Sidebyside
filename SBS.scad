@@ -218,13 +218,14 @@ module Chassis(){
     translate([0,0,40])
     difference(){
     union(){
-    cube(size=[25,25,80], center=true);
-    translate([0,12.5,0])
+    translate([0,0.25,0])
+    cube(size=[25,26,80], center=true);
+    translate([0,14,0])
     cylinder(d=25, h=80, center=true);
     translate([0,-12.5,0])
     cylinder(d=25, h=80, center=true);
     }
-    translate([0,12.5,9])
+    translate([0,14,9])
     cylinder(d=22, h=2, center=true);
     translate([0,0,-39])
     battery_enclosure();
@@ -232,6 +233,7 @@ module Chassis(){
     rotate([0,90,0])
     translate([0,-30.75,0])
     cylinder(d=40, h=26, center=true);
+    
  }  
 }
 module battery_enclosure(){
@@ -242,11 +244,14 @@ module battery_enclosure(){
     cube([22,22,43],center=true);
     translate([0,12,23])
     cylinder(d=22, h=43, center=true);
-    translate([0,12,42.5])
+    translate([0,14,42.5])
     cylinder(d=10.5, h=10, center=true);
+    translate([0,-0.75,60.5])
+    cylinder(d=1.25, h=32.1, center=true);
 }
 }
 module sbs_cut(){
+    translate([0,14,64.51])
     cylinder(d=26, h=31, center=true);
 }
 
@@ -371,13 +376,12 @@ faces=[[0,1,2],[3,4,5],[6,7,8],[9,10,11],[12,13,14],[15,16,17],[18,19,20],[21,22
 
 difference(){
 Chassis();
-translate([0,12.5,64.51])
 sbs_cut();
 }
 
 //battery_enclosure();
-translate([0,-12.5,4.5])
-battery_21700();
+//translate([0,-12.5,4.5])
+//battery_21700();
 
 //translate([0,0,40])
 //battery_door();
