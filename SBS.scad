@@ -2,8 +2,8 @@ include <BOSL/constants.scad>
 use <BOSL/masks.scad>
 use <BOSL/transforms.scad>
 
-$fa = 1; // Set these to 1 for faster preview.
-$fs = 1; // ----------------------------------
+$fa = 0.1; // Set these to 1 for faster preview.
+$fs = 0.1; // ----------------------------------
 fudge=0.1; // Don't change this value
 
 
