@@ -224,6 +224,7 @@ module Chassis(){
     cylinder(d=25, h=80, center=true);
     translate([0,-12.5,0])
     cylinder(d=25, h=80, center=true);
+    translate([12,10,-17])
     }
     translate([0,14,9])
     cylinder(d=22, h=2, center=true);
@@ -365,28 +366,6 @@ module DNA60_Mount () {
        //standoff();
  }
 }
-module DNA60_Internal (){
-    difference(){
-        translate([-16.5,0,25])
-        rotate([0,0,90])
-        cube([30,18,50],center=true);
-        translate([-22,0,29.75])
-        rotate([0,-0.5,90])
-        cube([22.25,20,45],center=true);
-        translate([-24,0,5])
-        cube([15,18,8], center=true);
-        translate([-0.5,0,0])
-        rotate([90,0,90])
-        cube([6,10,24], center=true);
-        translate([-1.5,-1,10])
-        rotate([90,0,90])
-        cube([11.6,18,32], center=true);
-        translate([-16,0,4])
-        cube([20,18,12], center=true);
-        translate([0,20.25,2.75])
-        cube([16.8,15.5,2], center=true);   
- }
-}
 module DNA60_Screen (){
         union(){
         translate([12,-1,5])
@@ -426,7 +405,7 @@ sbs_cut();
 
 //translate([0,0,40])
 //battery_door();
-translate([18,10,-5])
+translate([20,10,-5])
 DNA60();
-translate([18,10,-5])
+translate([20,10,-5])
 DNA60_Mount();
