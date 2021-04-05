@@ -117,9 +117,14 @@ module buttons(){
   cylinder(d=4.5, h=7, center=true);
   }
   union(){
+  difference(){
   translate([-10.5,15.75,8])
   rotate([0,90,0])
   cylinder(d=3.75, h=5, center=true);
+  translate([-18,14,10])
+  rotate([0,0,45])
+  fillet_mask(l=10, r=12.5, orient=ORIENT_Z);
+  }
   translate([-7.3,15.75,8])
   rotate([0,90,0])
   cylinder(d=4.5, h=7, center=true);
